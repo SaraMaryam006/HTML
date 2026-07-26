@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>College Election Application</title>
+</head>
+
+<body bgcolor="lightblue">
+
+<center>
+
+<h2>COLLEGE ELECTION APPLICATION</h2>
+
+<form onsubmit="return validateForm()">
+
+<table border="1" cellpadding="10" width="60%" bgcolor="lightyellow">
+
+<tr>
+<td>Student Name</td>
+<td><input type="text" id="name" required></td>
+</tr>
+
+<tr>
+<td>Register Number</td>
+<td><input type="text" id="regno" required></td>
+</tr>
+
+<tr>
+<td>Email</td>
+<td><input type="email" id="email" required></td>
+</tr>
+
+<tr>
+<td>Phone Number</td>
+<td><input type="text" id="phone" required></td>
+</tr>
+
+<tr>
+<td>Department</td>
+<td>
+<select id="dept">
+<option>Computer Science</option>
+<option>Information Technology</option>
+<option>Commerce</option>
+<option>Artificial Intelligence</option>
+<option>Mathematics</option>
+</select>
+</td>
+</tr>
+
+<tr>
+<td>Position Applying For</td>
+<td>
+<input type="radio" name="post"> President
+<input type="radio" name="post"> Vice President
+<input type="radio" name="post"> Secretary
+</td>
+</tr>
+
+<tr>
+<td>Election Symbol</td>
+<td>
+<select>
+<option>Book</option>
+<option>Tree</option>
+<option>Star</option>
+<option>Pen</option>
+</select>
+</td>
+</tr>
+
+<tr>
+<td colspan="2" align="center">
+
+<input type="submit" value="Submit">
+
+<input type="reset" value="Reset">
+
+</td>
+</tr>
+
+</table>
+
+</form>
+
+</center>
+
+<script>
+
+function validateForm()
+{
+
+var name = document.getElementById("name").value;
+
+var slogan = prompt("Enter your Election Campaign Slogan:");
+
+if(slogan=="" || slogan==null)
+{
+alert("Please enter your campaign slogan.");
+return false;
+}
+
+var check = confirm("Do you want to submit your Election Application?");
+
+if(check)
+{
+
+alert("Election Application Submitted Successfully!\n\nWelcome " + name + "\nBest Wishes for the Election!");
+
+return true;
+
+}
+else
+{
+
+alert("Election Application Cancelled.");
+
+return false;
+
+}
+
+}
+
+</script>
+
+</body>
+
+</html>
